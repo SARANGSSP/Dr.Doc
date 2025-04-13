@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="summary.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Generate Summary</h1>
+
+      <label for="theme-color">Select Highlight Color:</label>
+      <select id="theme-color">
+        <option value="#3B82F6">Blue</option>
+        <option value="#22C55E">Green</option>
+        <option value="#FACC15">Yellow</option>
+        <option value="#FB923C">Orange</option>
+        <option value="#EF4444">Red</option>
+        <option value="#8B5CF6">Purple</option>
+        <option value="#00FFC6">Neon</option>
+      </select>
+
+      <label for="secondary-color">Select Skippable Text Color:</label>
+      <select id="secondary-color">
+        <option value="#3B82F6">Blue</option>
+        <option value="#22C55E">Green</option>
+        <option value="#FACC15">Yellow</option>
+        <option value="#FB923C">Orange</option>
+        <option value="#EF4444">Red</option>
+        <option value="#8B5CF6">Purple</option>
+        <option value="#00FFC6">Neon</option>
+      </select>
+
+      <div class="upload-area" id="upload-area">
+        <p id="upload-text">Drag & drop your file here or click to upload</p>
+        <input type="file" id="file-upload" />
+        <div id="file-name" class="file-name"></div>
+      </div>
+
+      <button id="generate-btn">Generate Summary</button>
+      <a
+        id="download-btn"
+        class="button"
+        download
+        style="display: none; margin-top: 15px"
+        >Download Highlighted PDF</a
+      >
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

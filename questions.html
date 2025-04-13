@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Creator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="questions.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create Questions</h1>
+
+      <label for="importance">Number:</label>
+      <select id="importance">
+        <option value="10">10 Questions</option>
+        <option value="20">20 Questions</option>
+        <option value="30">30 Questions</option>
+      </select>
+
+      <label for="question-type">Question Type:</label>
+      <select id="question-type">
+        <option value="mcq">MCQ</option>
+        <option value="short">Short</option>
+        <option value="long">Long</option>
+      </select>
+
+      <div class="upload-area" id="upload-area">
+        <p id="upload-text">Drag & drop your file here or click to upload</p>
+        <input type="file" id="file-upload" />
+        <div id="file-name" class="file-name"></div>
+      </div>
+
+      <button id="create-btn">Create Questions</button>
+    </div>
+
+    <script src="questions.js"></script>
+  </body>
+</html>
